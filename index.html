@@ -478,38 +478,37 @@
         </div>
 
     </div>
-    <div id="cart">
-        <table>
-          <thead>
-              <tr>
-                  <th scope="col">Remove</th>
-                  <th scope="col">Player</th>
-                  <th scope="col">Value</th>
-              </tr>
-          </thead>
-          <tbody id="cart-table">
-          </tbody>
-        </table>
-        <p id="totalAmount">Total: € 0.00</p>
-        </div>
-
-        <div>
-            <form action="http://sirjm.infinityfreeapp.com/checkout.php" method="GET">
-                <div class="form-group">
-                  <label for="cust_name">Name</label>
-                  <input type="text" class="form-control" id="cust_name" name="cust_name" placeholder="Enter Name" required>
-                </div>
-                <div class="form-group">
-                  <label for="cust_addr">Address</label>
-                  <input type="text" class="form-control" id="cust_addr" name="cust_addr" placeholder="Enter Full Address" required>
-                </div>
-                <div class="form-group">
-                    <label for="cust_email">Email Address</label>
-                    <input type="text" class="form-control" id="cust_email" name="cust_email" placeholder="Enter Email Address" required>
-                  </div>
-                <button type="submit" class="btn btn-primary">Order Now</button>
-              </form>
-              </div>
+    <div>
+        <form action="http://sirjm.infinityfreeapp.com/checkout.php" method="GET">
+            <div class="form-group">
+              <label for="cust_name">Name</label>
+              <input type="text" class="form-control" id="cust_name" name="cust_name" placeholder="Enter Name" required>
+            </div>
+            <div class="form-group">
+              <label for="cust_addr">Address</label>
+              <input type="text" class="form-control" id="cust_addr" name="cust_addr" placeholder="Enter Full Address" required>
+            </div>
+            <div class="form-group">
+                <label for="cust_email">Email Address</label>
+                <input type="text" class="form-control" id="cust_email" name="cust_email" placeholder="Enter Email Address" required>
+            </div>
+            <div id="cart">
+                <table>
+                  <thead>
+                      <tr>
+                          <th scope="col">Remove</th>
+                          <th scope="col">Player</th>
+                          <th scope="col">Value</th>
+                      </tr>
+                  </thead>
+                  <tbody id="cart-table">
+                  </tbody>
+                </table>
+                <p id="totalAmount">Total: € 0.00</p>
+            </div>
+            <button type="submit" class="btn btn-primary">Order Now</button>
+        </form>
+    </div>
 </body>
 </html>
   <script>
