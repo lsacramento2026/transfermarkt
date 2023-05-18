@@ -1,1 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Footy Transfer Portal</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	<style>
+        body {
+            background-color: #e9e4df;
+        }
+        header {
+            background-color: red;
+        }
 
+        header img {
+            margin-left: 20px;
+            height: 150px;
+        }
+
+        h1 {
+            margin-left: 40px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+        }
+
+        .card button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card-title {
+            text-align: center;
+        }
+
+        .row {
+            max-width: 100%;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .card-img-top {
+            margin-top: 15px;
+        }
+        button {
+            background-color: red;
+            color: #FFFFFF;
+            border-radius: 5px;
+            border: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="FTP_Logo.svg">
+        <nav class="navbar navbar-expand-lg navbar-light bg-red">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="aboutthecompany.html" >About Us</a>
+            </li>
+            </ul>
+            <a href="#cart" style="margin-left: 85%;"><img src="cart.png" style="height: 50px;"></a>
+        </div>
+        </nav>
+    </header>
+    <h1>Attackers</h1>
+    <div class="row">
+        <div class="card col-3">
+            <img class="card-img-top" src="Attacker1.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Ollie Watkins</h5>
+            <p class="card-text">
+                Club: Aston Villa <br>
+                Games: 35 (Premier League) <br>
+                Goals: 14 <br>
+                Assists: 6 <br><br>
+                Watkins has led the Birmingham side to a top half finish this season in the Prem. <br><br>
+                Price: €32,000,000
+            </p>
+            <button onclick="addToCart(0)">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <img class="card-img-top" src="Attacker2.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Álvaro Morata</h5>
+            <p class="card-text">
+                Club: Atlético de Madrid <br>
+                Games: 34 (La Liga) <br>
+                Goals: 13 <br>
+                Assists: 2 <br><br>
+                The 30 year old Spaniard has helped Atletico reached the heights of Champions' League this season <br><br>
+                Price: €25,000,000
+            </p>
+            <button onclick="addToCart(1)">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <img class="card-img-top" src="Attacker3.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Eric Maxim Choupo-Moting</h5>
+            <p class="card-text">
+                Club: Bayern München <br>
+                Games: 18 (Bundesliga)<br>
+                Goals: 10 <br>
+                Assists: 2 <br><br>
+
+                At 34 years of age, Choupo-Moting remains one of the best forwards in the Bundesliga. <br><br>
+                Price: €6,000,000
+            </p>
+            <button onclick="addToCart(2)">Purchase</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="card col-3">
+            <img class="card-img-top" src="Attacker4.webp" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Paulo Dybala</h5>
+            <p class="card-text">
+                Club: A.S. Roma <br>
+                Games: 24 (Serie A) <br>
+                Goals: 11 <br>
+                Assists: 6 <br><br>
+                The Argentine has helped multiple Italian clubs to Champions' League fixtures <br><br>
+                Price: €30,000,000
+            </p>
+            <button onclick="addToCart(3)">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <img class="card-img-top" src="Attacker5.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Alexandre Lacazette</h5>
+            <p class="card-text">
+                Club: Olympique Lyonnais <br>
+                Games: 32 <br>
+                Goals: 25 <br>
+                Assists: 4 <br><br>
+                The Frenchmen has been all across Europe to showcase his talents <br><br>
+                Price: €12,000,000
+            </p>
+            <button onclick="addToCart(4)">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <img class="card-img-top" src="Attacker6.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Son Heung-Min</h5>
+            <p class="card-text">
+                Club: Tottenham Hotspurs <br>
+                Games: 34 (Premier League) <br>
+                Goals: 10 <br>
+                Assists: 5 <br><br>
+                At only 30 years old, he's been one of the greatest Asian players of all-time and has been a legend for Tottenham <br><br>
+                Price: €60,000,000
+            </p>
+            <button onclick="addToCart(5)">Purchase</button>
+            </div>
+        </div>
+
+    </div>
+    <h1>Midfielders</h1>
+    <div class="row">
+        <div class="card col-3">
+            <img class="card-img-top" src="Midfielder1.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Declan Rice</h5>
+            <p class="card-text">
+                Club: West Ham United <br>
+                Games: 35 (Premier League) <br>
+                Goals: 3 <br>
+                Assists: 2 <br><br>
+                A key player in West Ham's defending midfield, keeping the club out of relegation. <br><br>
+                Price: €80,000,000
+            </p>
+            <button onclick="addToCart(6)">Purchase</button>
+            </div>
+        </div>
+        <div class="card col-3">
+            <img class="card-img-top" src="Midfielder2.jpeg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Ritsu Doan</h5>
+            <p class="card-text">
+                Club: SC Freiburg <br>
+                Games: 31 (Bundesliga) <br>
+                Goals: 5 <br>
+                Assists: 6 <br><br>
+                A central attacking midfielder that pushes up on the right wing, helped his side to 5th in the league. <br><br>
+                Price: €15,000,000
+            </p>
+            <button onclick="addToCart(7)">Purchase</button>
+            </div>
+        </div>
+        <div class="card col-3">
+            <img class="card-img-top" src="Midfielder3.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Sergej Milinkovic-Savic</h5>
+            <p class="card-text">
+                Club: S.S. Lazio <br>
+                Games: 33 (Serie A) <br>
+                Goals: 7 <br>
+                Assists: 8 <br><br>
+                A centerpiece to Lazio's midfield, the Serbian has helped lead the Italian side to a top 2 finish in the league <br><br>
+                Price: €60,000,000
+            </p>
+            <button onclick="addToCart(8)">Purchase</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card col-3">
+            <img class="card-img-top" src="Midfielder4.webp" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Mikel Merino</h5>
+            <p class="card-text">
+                Club: Real Sociedad <br>
+                Games: 29 (La Liga) <br>
+                Goals: 1 <br>
+                Assists: 9 <br><br>
+                One of the best midfielders in Spain, he has been a cornerstone for Real Sociedad <br><br>
+                Price: €50,000,000
+            </p>
+            <button onclick="addToCart(9)">Purchase</button>
+            </div>
+        </div>
+        <div class="card col-3">
+            <img class="card-img-top" src="Midfielder5.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Xavi Simons</h5>
+            <p class="card-text">
+                Club: PSV Eindhoven <br>
+                Games: 32 (Eredivisie) <br>
+                Goals: 16 <br>
+                Assists: 8 <br><br>
+                One of the brightest young stars in the Eredivisie, Simons has helped PSV garner a top 2 finish in the league <br><br>
+                Price: €30,000,000
+            </p>
+            <button onclick="addToCart(10)">Purchase</button>
+            </div>
+        </div>
+        <div class="card col-3">
+            <img class="card-img-top" src="Midfielder6.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">James Ward-Prowse</h5>
+            <p class="card-text">
+                Club: Southampton <br>
+                Games: 36 (Premier League) <br>
+                Goals: 8 <br>
+                Assists: 3 <br><br>
+                Dubbed as the best freekick taker of England's top flight, he's been one of the few bright spots for the relegation-slated Southampton <br><br>
+                Price: €38,000,000
+            </p>
+            <button onclick="addToCart(11)">Purchase</button>
+            </div>
+        </div>
+    </div>
+    <h1>Defenders</h1>
+    <div class="row">
+        <div class="card col-3">
+            <img class="card-img-top" src="Defender1.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Kieran Trippier</h5>
+            <p class="card-text">
+                Club: Newcastle United <br>
+                Games: 35 (Premier League) <br>
+                Goals: 1 <br>
+                Assists: 5 <br><br>
+                He's been one of the best right-backs in the Prem and has helped Newcastle get into the Champions' League <br><br>
+                Price: €13,000,000
+            </p>
+            <button onclick="addToCart(12)">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <img class="card-img-top" src="Defender2.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Fikayo Tomori</h5>
+            <p class="card-text">
+                Club: A.C. Milan <br>
+                Games: 30 (Serie A) <br>
+                Goals: 1 <br>
+                Assists: 0 <br><br>
+                He has been an essential piece in the Champions' League semifinalists and will be one of the best centrebacks in the future <br><br>
+                Price: €45,000,000
+            </p>
+            <button onclick="addToCart(13)">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <img class="card-img-top" src="Defender3.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Presnel Kimpembe</h5>
+            <p class="card-text">
+                Club: Paris Saint-German <br>
+                Games: 11 (Ligue 1)<br>
+                Goals: 0 <br>
+                Assists: 0 <br><br>
+
+                One of the best defenders for the French giants, PSG <br><br>
+                Price: €35,000,000
+            </p>
+            <button onclick="addToCart(14)">Purchase</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="card col-3">
+            <img class="card-img-top" src="Defender4.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Joško Gvardiol</h5>
+            <p class="card-text">
+                Club: RB Leipzig <br>
+                Games: 29 (Bundesliga) <br>
+                Goals: 1 <br>
+                Assists: 0 <br><br>
+                Already considered one of the best defenders in the world, the young Croatian has a bright future ahead of him. <br><br>
+                Price: €75,000,000
+            </p>
+            <button onclick="addToCart(15)">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <img class="card-img-top" src="Defender5.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Pau Torres</h5>
+            <p class="card-text">
+                Club: Villarreal <br>
+                Games: 31 (La Liga) <br>
+                Goals: 1 <br>
+                Assists: 0 <br><br>
+                Playing for his boyhood club, he's been outstanding for Villarreal as they try to push for a Champions' League spot <br><br>
+                Price: €45,000,000
+            </p>
+            <button onclick="addToCart(16)">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <img class="card-img-top" src="Defender6.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">John Stones</h5>
+            <p class="card-text">
+                Club: Manchester City <br>
+                Games: 21 (Premier League) <br>
+                Goals: 2 <br>
+                Assists: 2 <br><br>
+                He's been a key contributor to the Man City dynasty, in terms of defending and linking up plays <br><br>
+                Price: €30,000,000
+            </p>
+            <button onclick="addToCart(17)">Purchase</button>
+            </div>
+        </div>
+
+    </div>
+    <h1>Keepers</h1>
+    <div class="row">
+        <div class="card col-3">
+            <img class="card-img-top" src="Keeper1.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Alisson Becker</h5>
+            <p class="card-text">
+                Club: Liverpool <br>
+                Games: 36 (Premier League) <br>
+                Goals (Conceded): 41 <br>
+                Clean Sheets: 14 <br><br>
+                Arguably the best keeper in the Prem, he's helped Liverpool to multiple trophies <br><br>
+                Price: €45,000,000
+            </p>
+            <button onclick="addToCart(18)">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <img class="card-img-top" src="Keeper2.webp" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Wojciech Szczęsny</h5>
+            <p class="card-text">
+                Club: Juventus <br>
+                Games: 25 (Serie A) <br>
+                Goals (Conceded): 20 <br>
+                Clean Sheets: 14 <br><br>
+                Poland's Number 1 has been detrimental to their and Italian giants, Juventus's success <br><br>
+                Price: €13,000,000
+            </p>
+            <button onclick="addToCart(19)">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <img class="card-img-top" src="Keeper3.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Alban Lafont</h5>
+            <p class="card-text">
+                Club: FC Nantes <br>
+                Games: 34 (Ligue 1)<br>
+                Goals (Conceded): 45 <br>
+                Clean Sheets: 10 <br><br>
+
+                One of the most promising young keepers in the world. He's held his own in the big matches <br><br>
+                Price: €20,000,000
+            </p>
+            <button onclick="addToCart(20)">Purchase</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="card col-3">
+            <img class="card-img-top" src="Keeper4.jpeg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Yassine Bounou</h5>
+            <p class="card-text">
+                Club: Sevilla <br>
+                Games: 24 (Bundesliga) <br>
+                Goals (Conceded): 37 <br>
+                Clean Sheets: 4 <br><br>
+                One of Africa's best players. He held his own against some of the greatest in the sport in the recent WC <br><br>
+                Price: €12,000,000
+            </p>
+            <button onclick="addToCart(21)">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <img class="card-img-top" src="Keeper5.jfif" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Kevin Trapp</h5>
+            <p class="card-text">
+                Club: Eintracht Frankfurt <br>
+                Games: 31 (Bundesliga) <br>
+                Goals (Conceded): 45 <br>
+                Clean Sheets: 6 <br><br>
+                Trapp has been one of the best Bundesliga keepers this season <br><br>
+                Price: €8,500,000
+            </p>
+            <button onclick="addToCart(22)">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card col-3">
+            <img class="card-img-top" src="Keeper6.webp" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">André Onana</h5>
+            <p class="card-text">
+                Club: Inter Milan <br>
+                Games: 22 (Serie A) <br>
+                Goals (Conceded): 16 <br>
+                Assists: 8 <br><br>
+                He's been an integral part to Inter's charge to a Champions' League final this year <br><br>
+                Price: €20,000,000
+            </p>
+            <button onclick="addToCart(23)">Purchase</button>
+            </div>
+        </div>
+
+    </div>
+    <div id="cart">
+        <table>
+          <thead>
+              <tr>
+                  <th scope="col">Remove</th>
+                  <th scope="col">Player</th>
+                  <th scope="col">Value</th>
+              </tr>
+          </thead>
+          <tbody id="cart-table">
+          </tbody>
+        </table>
+        <p id="totalAmount">Total: € 0.00</p>
+        </div>
+
+        <div>
+            <form action="http://sirjm.infinityfreeapp.com/checkout.php" method="GET">
+                <div class="form-group">
+                  <label for="cust_name">Name</label>
+                  <input type="text" class="form-control" id="cust_name" name="cust_name" placeholder="Enter Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="cust_addr">Address</label>
+                  <input type="text" class="form-control" id="cust_addr" name="cust_addr" placeholder="Enter Full Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="cust_email">Email Address</label>
+                    <input type="text" class="form-control" id="cust_email" name="cust_email" placeholder="Enter Email Address" required>
+                  </div>
+                <button type="submit" class="btn btn-primary">Order Now</button>
+              </form>
+              </div>
+</body>
+</html>
+  <script>
+
+    var menu = [
+        {
+            prodName: "Ollie Watkins",
+            prodPrice: 32000000
+        },
+        {
+            prodName: "Álvaro Morata",
+            prodPrice: 25000000
+        },
+        {
+            prodName: "Eric Maxim Choupo-Moting",
+            prodPrice: 6000000
+        },
+        {
+            prodName: "Paulo Dybala",
+            prodPrice: 30000000
+        },
+        {
+            prodName: "Alexandre Lacazette",
+            prodPrice: 12000000
+        },
+        {
+            prodName: "Son Heung Min",
+            prodPrice: 60000000
+        },
+        {
+            prodName: "Declan Rice",
+            prodPrice: 80000000
+        },
+        {
+            prodName: "Ritsu Doan",
+            prodPrice: 15000000
+        },
+        {
+            prodName: "Sergej Milinkovic-Savic",
+            prodPrice: 60000000
+        },
+        {
+            prodName: "Mikel Merino",
+            prodPrice: 50000000
+        },
+        {
+            prodName: "Xavi Simons",
+            prodPrice: 30000000
+        },
+        {
+            prodName: "James Ward-Prowse",
+            prodPrice: 38000000
+        },
+        {
+            prodName: "Kieran Trippier",
+            prodPrice: 13000000
+        },
+        {
+            prodName: "Fikayo Tomori",
+            prodPrice: 45000000
+        },
+        {
+            prodName: "Presnel Kimpembe",
+            prodPrice: 35000000
+        },
+        {
+            prodName: "Joško Gvardiol",
+            prodPrice: 75000000
+        },
+        {
+            prodName: "Pau Torres",
+            prodPrice: 45000000
+        },
+        {
+            prodName: "Joh  Stones",
+            prodPrice: 30000000
+        },
+        {
+            prodName: "Alisson Becker",
+            prodPrice: 45000000
+        },
+        {
+            prodName: "Wojciech Szczęsny",
+            prodPrice: 13000000
+        },
+        {
+            prodName: "Alban Lafont",
+            prodPrice: 6000
+        },
+        {
+            prodName: "Yassine Bounou",
+            prodPrice: 12000000
+        },
+        {
+            prodName: "Kevin Trapp",
+            prodPrice: 8500000
+        },
+        {
+            prodName: "André Onana",
+            prodPrice: 20000000
+        },
+
+  
+    ]
+
+    var cart = []
+
+function displayCart() {
+    var table = document.getElementById("cart-table")
+    var total = 0;
+    table.innerHTML = ""
+
+    for (var i = 0; i < cart.length; i++) {
+        var row = table.insertRow(i)
+        var remove = row.insertCell(0)
+        var name = row.insertCell(1)
+        var price = row.insertCell(2)
+
+        remove.innerHTML = `<button onclick="removeFromCart(${i})">Remove</button>`
+        name.innerHTML = cart[i].prodName
+        price.innerHTML = cart[i].prodPrice
+
+        total = total + cart[i].prodPrice
+    }
+    var totalAmount = document.getElementById("totalAmount")
+    totalAmount.innerHTML = `Total: € ${total}`
+}
+
+function removeFromCart(i) {
+    cart.splice(i, 1)
+    displayCart()
+}
+
+function addToCart(i) {
+    cart.push(menu[i])
+    displayCart()
+}
+
+function removeAll() {
+    cart = []
+    displayCart()
+}
+</script>
