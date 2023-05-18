@@ -65,6 +65,10 @@
         .navbar {
             margin-top: -10%;
         }
+
+        form {
+            margin-left: 60px;
+        }
     </style>
 </head>
 <body>
@@ -487,32 +491,34 @@
     <div>
         <form action="http://sirjm.infinityfreeapp.com/checkout.php" method="GET">
             <div class="form-group">
-              <label for="cust_name">Name</label>
-              <input type="text" class="form-control" id="cust_name" name="cust_name" placeholder="Enter Name" required>
-            </div>
-            <div class="form-group">
-              <label for="cust_addr">Address</label>
-              <input type="text" class="form-control" id="cust_addr" name="cust_addr" placeholder="Enter Full Address" required>
-            </div>
-            <div class="form-group">
-                <label for="cust_email">Email Address</label>
-                <input type="text" class="form-control" id="cust_email" name="cust_email" placeholder="Enter Email Address" required>
-            </div>
+                <label for="cust_name">Name</label>
+                <input type="text" class="form-control" id="cust_name" name="cust_name" placeholder="Enter Name" style="width: 500px" required>
+              </div>
+              <div class="form-group">
+                <label for="cust_addr">Address</label>
+                <input type="text" class="form-control" id="cust_addr" name="cust_addr" placeholder="Enter Full Address" style="width: 700px" required>
+              </div>
+              <div class="form-group">
+                  <label for="cust_email">Email Address</label>
+                  <input type="text" class="form-control" id="cust_email" name="cust_email" placeholder="Enter Email Address" style="width: 400px" required>
+              </div>
             <div id="cart">
                 <table>
                   <thead>
                       <tr>
-                          <th scope="col">Remove</th>
                           <th scope="col">Player</th>
                           <th scope="col">Value</th>
+                          <th scope="col">
+                          </th>
                       </tr>
                   </thead>
                   <tbody id="cart-table">
                   </tbody>
                 </table>
-                <p id="totalAmount">Total: € 0.00</p>
+                <p id="totalAmount">Total: € 0</p>
             </div>
             <input type="hidden" name="cust_order" id="checkout">
+            <button type="button" onclick="removeAll()" class="btn btn-danger">Clear Cart</button><br><br>
             <button type="submit" class="btn btn-primary">Order Now</button>
         </form>
     </div>
@@ -522,99 +528,99 @@
 
     var menu = [
         {
-            prod_name: "Ollie Watkins",
+            prod_name: "Ollie Watkins - ",
             prod_price: 32000000
         },
         {
-            prod_name: "Álvaro Morata",
+            prod_name: "Álvaro Morata - ",
             prod_price: 25000000
         },
         {
-            prod_name: "Eric Maxim Choupo-Moting",
+            prod_name: "Eric Maxim Choupo-Moting - ",
             prod_price: 6000000
         },
         {
-            prod_name: "Paulo Dybala",
+            prod_name: "Paulo Dybala - ",
             prod_price: 30000000
         },
         {
-            prod_name: "Alexandre Lacazette",
+            prod_name: "Alexandre Lacazette - ",
             prod_price: 12000000
         },
         {
-            prod_name: "Son Heung Min",
+            prod_name: "Son Heung Min - ",
             prod_price: 60000000
         },
         {
-            prod_name: "Declan Rice",
+            prod_name: "Declan Rice - ",
             prod_price: 80000000
         },
         {
-            prod_name: "Ritsu Doan",
+            prod_name: "Ritsu Doan - ",
             prod_price: 15000000
         },
         {
-            prod_name: "Sergej Milinkovic-Savic",
+            prod_name: "Sergej Milinkovic-Savic - ",
             prod_price: 60000000
         },
         {
-            prod_name: "Mikel Merino",
+            prod_name: "Mikel Merino - ",
             prod_price: 50000000
         },
         {
-            prod_name: "Xavi Simons",
+            prod_name: "Xavi Simons - ",
             prod_price: 30000000
         },
         {
-            prod_name: "James Ward-Prowse",
+            prod_name: "James Ward-Prowse - ",
             prod_price: 38000000
         },
         {
-            prod_name: "Kieran Trippier",
+            prod_name: "Kieran Trippier - ",
             prod_price: 13000000
         },
         {
-            prod_name: "Fikayo Tomori",
+            prod_name: "Fikayo Tomori - ",
             prod_price: 45000000
         },
         {
-            prod_name: "Presnel Kimpembe",
+            prod_name: "Presnel Kimpembe - ",
             prod_price: 35000000
         },
         {
-            prod_name: "Joško Gvardiol",
+            prod_name: "Joško Gvardiol - ",
             prod_price: 75000000
         },
         {
-            prod_name: "Pau Torres",
+            prod_name: "Pau Torres - ",
             prod_price: 45000000
         },
         {
-            prod_name: "Joh  Stones",
+            prod_name: "John Stones - ",
             prod_price: 30000000
         },
         {
-            prod_name: "Alisson Becker",
+            prod_name: "Alisson Becker - ",
             prod_price: 45000000
         },
         {
-            prod_name: "Wojciech Szczęsny",
+            prod_name: "Wojciech Szczęsny - ",
             prod_price: 13000000
         },
         {
-            prod_name: "Alban Lafont",
-            prod_price: 6000
+            prod_name: "Alban Lafont - ",
+            prod_price: 20000000
         },
         {
-            prod_name: "Yassine Bounou",
+            prod_name: "Yassine Bounou - ",
             prod_price: 12000000
         },
         {
-            prod_name: "Kevin Trapp",
+            prod_name: "Kevin Trapp - ",
             prod_price: 8500000
         },
         {
-            prod_name: "André Onana",
+            prod_name: "André Onana - ",
             prod_price: 20000000
         },
 
@@ -630,9 +636,9 @@ function displayCart() {
 
     for (var i = 0; i < cart.length; i++) {
         var row = table.insertRow(i)
-        var remove = row.insertCell(0)
-        var name = row.insertCell(1)
-        var price = row.insertCell(2)
+        var name = row.insertCell(0)
+        var price = row.insertCell(1)
+        var remove = row.insertCell(2)
 
         remove.innerHTML = `<button onclick="removeFromCart(${i})">Remove</button>`
         name.innerHTML = cart[i].prod_name
